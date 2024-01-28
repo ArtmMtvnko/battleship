@@ -23,3 +23,7 @@ test('Ship Factory: try to create more ship that rules allows', () => {
         shipFactory.createHugeShip()
     }).toThrow('Set of huge ships has already fulled')
 })
+
+test('Ship: basic scenario of proper creating new ship', () => {
+    expect(new ShipFactory().createHugeShip()).toEqual(new Ship(4))
+})
